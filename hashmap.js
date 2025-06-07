@@ -170,4 +170,34 @@ console.log('Entries:', test.entries());
 
 // Clear
 test.clear();
-console.log('Length after clear:', test.length()); // 0  
+console.log('Length after clear:', test.length()); // 0
+
+class HashSet {
+    constructor() {
+        this.map = new HashMap();
+    }
+
+    add(key) {
+        this.map.set(key, true);
+    }
+
+    has(key) {
+        return this.map.has(key);
+    }
+
+    remove(key) {
+        return this.map.remove(key);
+    }
+
+    values() {
+        return this.map.keys();
+    }
+
+    clear() {
+        this.map.clear();
+    }
+
+    length() {
+        return this.map.length();
+    }
+}  
